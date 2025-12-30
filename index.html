@@ -1,181 +1,183 @@
 <!-- update -->
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scenthound × UCF Partnership</title>
 
-    <style>
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    margin: 0;
-    padding: 40px 20px;
-    color: #000;
-    text-align: center;
-  }
-
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-
-  /* Logos */
-  .logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 36px;
-    margin-bottom: 28px;
-    flex-wrap: wrap;
-  }
-
-  /* LOGO SIZING */
-  .logo-scenthound {
-    max-height: 140px; /* 2x */
-  }
-
-  .logo-ucf {
-    max-height: 210px; /* 3x */
-  }
-
-  h1 {
-    font-size: 32px;
-    margin-bottom: 14px;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 18px;
-    max-width: 760px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* HERO IMAGE — HALF SIZE */
-  .hero img {
-    width: 100%;
-    max-width: 450px; /* was 900px */
-    border-radius: 12px;
-    margin: 24px auto;
-    display: block;
-  }
-
-  /* Locations */
-  .locations {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-    margin-top: 30px;
-  }
-
-  .location-link {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .location-card {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 22px;
-    text-align: left;
-    background: #fafafa;
-    height: 100%;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-
-  .location-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  }
-
-  .location-card h3 {
-    margin-top: 0;
-    margin-bottom: 8px;
-  }
-
-  .location-card p {
-    margin: 0 0 14px 0;
-    font-size: 14px;
-  }
-
-  .cta {
-    display: inline-block;
-    background: #000;
-    color: #fff;
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-size: 14px;
-  }
-
-  footer {
-    margin-top: 48px;
-    font-size: 12px;
-    color: #666;
-  }
-
-  /* ===== MOBILE OPTIMIZATION ===== */
-  @media (max-width: 600px) {
+  <style>
     body {
-      padding: 22px 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 36px 18px;
+      color: #000;
+      text-align: center;
     }
 
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* LOGOS */
     .logos {
-      gap: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
     }
 
     .logo-scenthound {
-      max-height: 110px;
+      max-height: 90px;
+      width: auto;
     }
 
+    /* UCF = DOUBLE SIZE */
     .logo-ucf {
-      max-height: 150px;
+      max-height: 180px;
+      width: auto;
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 30px;
+      margin-bottom: 12px;
     }
 
     p {
-      font-size: 15px;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .hero img {
-      max-width: 320px;
-      margin: 18px auto;
-    }
-
+    /* LOCATIONS */
     .locations {
-      gap: 14px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin: 28px 0 36px 0;
+    }
+
+    .location-link {
+      text-decoration: none;
+      color: inherit;
     }
 
     .location-card {
-      padding: 18px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 22px;
+      text-align: left;
+      background: #fafafa;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .location-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .location-card h3 {
+      margin-top: 0;
+      margin-bottom: 6px;
+    }
+
+    .location-card p {
+      margin: 0 0 12px 0;
+      font-size: 14px;
     }
 
     .cta {
-      display: block;
-      width: 100%;
-      text-align: center;
-      padding: 14px 16px;
-      font-size: 16px;
-      border-radius: 8px;
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 14px;
     }
-  }
-</style>
+
+    /* HERO (SMALLER + BELOW LOCATIONS) */
+    .hero img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 12px;
+      margin: 24px auto;
+      display: block;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 600px) {
+      body {
+        padding: 22px 14px;
+      }
+
+      .logos {
+        gap: 14px;
+      }
+
+      .logo-scenthound {
+        max-height: 70px;
+      }
+
+      .logo-ucf {
+        max-height: 130px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .locations {
+        gap: 14px;
+      }
+
+      .location-card {
+        padding: 18px;
+      }
+
+      .cta {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 14px 16px;
+        font-size: 16px;
+        border-radius: 8px;
+      }
+
+      .hero img {
+        max-width: 300px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
 
-    <!-- Logos -->
-   <div class="logos">
-  <img class="logo-scenthound" src="Scenthound-logo.png" alt="Scenthound Logo">
-  <img class="logo-ucf" src="UCF-logo.png" alt="UCF Knights Athletics Logo">
-</div>
+    <!-- LOGOS -->
+    <div class="logos">
+      <img class="logo-scenthound" src="Scenthound-logo.png" alt="Scenthound Logo">
+      <img class="logo-ucf" src="UCF-logo.png" alt="UCF Knights Athletics Logo">
+    </div>
 
-    <!-- Headline -->
+    <!-- HEADLINE -->
     <h1>Proud Partners in Pet Wellness with UCF Athletics</h1>
 
     <p>
@@ -184,42 +186,56 @@
     </p>
 
     <p>
-      Your dog is part of the family — and part of your team. Scenthound partners with UCF Athletics to support Knight Nation with 
-      affordable, routine dog care that keeps pups clean, comfortable, and thriving all season long.
+      Scenthound provides routine hygiene and wellness care for dogs, focusing on
+      the fundamentals that help pets feel better, look better, and live healthier lives.
     </p>
 
-    <!-- Dog Image -->
-    <<div class="hero">
-  <img src="Dog-hero.jpg" alt="Happy, healthy dog">
-</div>
-
-    <!-- Instruction -->
+    <!-- PARTICIPATING LOCATIONS (NOW ABOVE HERO) -->
     <p><strong>
-      These locations are part of the UCF partnership. Please click the location
-      closest to you to learn more.
+      These locations are participating in the UCF partnership.  
+      Please click the location closest to you to learn more.
     </strong></p>
 
-    <!-- Locations -->
     <div class="locations">
 
-      <div class="location-card">
-        <h3>Scenthound Oviedo</h3>
-        <p>1121 Alafaya Trail<br>Sprouts Shopping Center</p>
-        <a href="https://www.scenthound.com/oviedo">Visit Oviedo</a>
-      </div>
+      <a class="location-link" href="https://www.scenthound.com/oviedo">
+        <div class="location-card">
+          <h3>Scenthound Oviedo</h3>
+          <p>
+            1121 Alafaya Trail<br>
+            Sprouts Shopping Center
+          </p>
+          <span class="cta">Visit Oviedo</span>
+        </div>
+      </a>
 
-      <div class="location-card">
-        <h3>Scenthound Maitland</h3>
-        <p>400 N Orlando Ave, Suite 110<br>Near Publix</p>
-        <a href="https://www.scenthound.com/maitland">Visit Maitland</a>
-      </div>
+      <a class="location-link" href="https://www.scenthound.com/maitland">
+        <div class="location-card">
+          <h3>Scenthound Maitland</h3>
+          <p>
+            400 N Orlando Ave, Suite 110<br>
+            Near Publix
+          </p>
+          <span class="cta">Visit Maitland</span>
+        </div>
+      </a>
 
-      <div class="location-card">
-        <h3>Scenthound Winter Park</h3>
-        <p>4072 N Goldenrod Rd<br>Publix Shopping Center</p>
-        <a href="https://www.scenthound.com/winter-park">Visit Winter Park</a>
-      </div>
+      <a class="location-link" href="https://www.scenthound.com/winter-park">
+        <div class="location-card">
+          <h3>Scenthound Winter Park</h3>
+          <p>
+            4072 N Goldenrod Rd<br>
+            Publix Shopping Center
+          </p>
+          <span class="cta">Visit Winter Park</span>
+        </div>
+      </a>
 
+    </div>
+
+    <!-- HERO IMAGE (NOW BELOW LOCATIONS) -->
+    <div class="hero">
+      <img src="Dog-hero.jpg" alt="Happy, healthy dog">
     </div>
 
     <footer>
