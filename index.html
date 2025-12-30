@@ -34,13 +34,10 @@
 
     .logo-scenthound {
       max-height: 90px;
-      width: auto;
     }
 
-    /* UCF = DOUBLE SIZE */
     .logo-ucf {
-      max-height: 180px;
-      width: auto;
+      max-height: 180px; /* double size */
     }
 
     h1 {
@@ -57,12 +54,53 @@
       margin-right: auto;
     }
 
+    /* FREE TRIAL CALLOUT */
+    .callout {
+      text-align: left;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+      padding: 18px;
+      background: #ffffff;
+      max-width: 860px;
+      margin: 18px auto 26px auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+
+    .callout p {
+      margin: 8px 0;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .bullets {
+      margin: 10px 0 12px 18px;
+      padding: 0;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .eligibility {
+      font-size: 12px;
+      color: #666;
+      margin-top: 8px;
+    }
+
     /* LOCATIONS */
     .locations {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 22px;
-      margin: 28px 0 36px 0;
+      margin: 24px 0 36px 0;
     }
 
     .location-link {
@@ -103,7 +141,7 @@
       font-size: 14px;
     }
 
-    /* HERO (SMALLER + BELOW LOCATIONS) */
+    /* HERO */
     .hero img {
       width: 100%;
       max-width: 420px;
@@ -124,10 +162,6 @@
         padding: 22px 14px;
       }
 
-      .logos {
-        gap: 14px;
-      }
-
       .logo-scenthound {
         max-height: 70px;
       }
@@ -142,6 +176,11 @@
 
       p {
         font-size: 15px;
+      }
+
+      .callout {
+        padding: 16px;
+        margin-bottom: 20px;
       }
 
       .locations {
@@ -181,16 +220,32 @@
     <h1>Proud Partners in Pet Wellness with UCF Athletics</h1>
 
     <p>
-      Scenthound is proud to partner with UCF Athletics to support the health and
-      wellness of dogs across our local community.
+      Scenthound is proud to partner with UCF Athletics to promote canine wellness across our community.
     </p>
 
-    <p>
-      Scenthound provides routine hygiene and wellness care for dogs, focusing on
-      the fundamentals that help pets feel better, look better, and live healthier lives.
-    </p>
+    <!-- FREE TRIAL CALLOUT -->
+    <div class="callout">
+      <span class="badge">FREE TRIAL</span>
 
-    <!-- PARTICIPATING LOCATIONS (NOW ABOVE HERO) -->
+      <p>
+        To celebrate this partnership, eligible first-time guests can enjoy a
+        <strong>FREE Scenthound wellness visit</strong>, which includes:
+      </p>
+
+      <ul class="bullets">
+        <li>Bath</li>
+        <li>Nail clipping</li>
+        <li>Teeth brushing</li>
+        <li>Ear cleaning</li>
+        <li><strong>S.C.E.N.T.™ Check Report Card</strong></li>
+      </ul>
+
+      <p class="eligibility">
+        Eligibility: One free trial per customer.
+      </p>
+    </div>
+
+    <!-- LOCATIONS -->
     <p><strong>
       These locations are participating in the UCF partnership.  
       Please click the location closest to you to learn more.
@@ -233,7 +288,7 @@
 
     </div>
 
-    <!-- HERO IMAGE (NOW BELOW LOCATIONS) -->
+    <!-- HERO -->
     <div class="hero">
       <img src="Dog-hero.jpg" alt="Happy, healthy dog">
     </div>
