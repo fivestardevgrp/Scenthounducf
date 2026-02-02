@@ -2,15 +2,269 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=https://www.scenthound.com/newyearfreetrial?location_id=154731" />
-  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scenthound × UCF — Choose Your Location</title>
 
-  <script>
-    window.location.replace("https://www.scenthound.com/newyearfreetrial?location_id=154731");
-  </script>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 24px 14px;
+      color: #000;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin: 6px 0 14px 0;
+    }
+
+    .logo-scenthound { max-height: 70px; }
+    .logo-ucf { max-height: 130px; }
+
+    h1 {
+      font-size: 22px;
+      margin: 10px 0 10px 0;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.55;
+      margin: 0 auto 14px auto;
+      max-width: 640px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin: 10px 0 12px 0;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      background: #fafafa;
+      border-radius: 14px;
+      padding: 16px;
+      text-align: left;
+      margin: 14px 0;
+    }
+
+    .controls {
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 14px 12px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px 12px;
+      font-size: 16px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      background: #000;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .btn.secondary {
+      background: #fff;
+      color: #000;
+      border: 1px solid #000;
+    }
+
+    .locations {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .locBtn {
+      text-align: left;
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: 14px;
+      cursor: pointer;
+    }
+
+    .locTitle {
+      font-weight: 700;
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+
+    .locMeta {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .fineprint {
+      font-size: 12px;
+      color: #666;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    @media (min-width: 700px) {
+      body { padding: 30px 18px; }
+      h1 { font-size: 24px; }
+      .logo-scenthound { max-height: 80px; }
+      .logo-ucf { max-height: 150px; }
+    }
+  </style>
 </head>
 
 <body>
-  <p>Redirecting…</p>
+  <div class="container">
+
+    <div class="logos">
+      <img class="logo-scenthound" src="Scenthound-logo.png" alt="Scenthound Logo">
+      <img class="logo-ucf" src="UCF-logo.png" alt="UCF Knights Athletics Logo">
+    </div>
+
+    <h1>Choose Your Closest Participating Location</h1>
+
+    <p>
+      Scenthound is proud to partner with UCF Athletics. Select the location closest to you to redeem your
+      <strong>FREE Trial</strong>.
+    </p>
+
+    <div class="card">
+      <div class="badge">FREE TRIAL</div>
+      <p style="margin-bottom:10px;">
+        Your free trial includes: Bath, Nail clipping, Teeth brushing, Ear cleaning, and a
+        <strong>S.C.E.N.T.™ Check Report Card</strong>.
+      </p>
+      <div class="fineprint">Eligibility: One free trial per customer.</div>
+    </div>
+
+    <!-- FASTEST UX: 3 BIG BUTTONS -->
+    <div class="card">
+      <p style="margin:0 0 10px 0;"><strong>Tap your closest location:</strong></p>
+
+      <div class="locations">
+        <button class="locBtn" onclick="go('oviedo')" type="button">
+          <div class="locTitle">Oviedo</div>
+          <div class="locMeta">1121 Alafaya Trail — Sprouts Shopping Center</div>
+        </button>
+
+        <button class="locBtn" onclick="go('maitland')" type="button">
+          <div class="locTitle">Maitland</div>
+          <div class="locMeta">400 N Orlando Ave, Suite 110 — near Publix</div>
+        </button>
+
+        <button class="locBtn" onclick="go('winterpark')" type="button">
+          <div class="locTitle">Winter Park</div>
+          <div class="locMeta">4072 N Goldenrod Rd — Publix Shopping Center</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- OPTIONAL ZIP HELPER (simple, not “perfect” mapping) -->
+    <div class="card">
+      <p style="margin:0 0 10px 0;"><strong>Prefer ZIP code?</strong> Enter it and we’ll suggest a location.</p>
+
+      <div class="controls">
+        <input id="zip" inputmode="numeric" maxlength="5" placeholder="Enter ZIP (optional)" />
+        <button class="btn secondary" type="button" onclick="suggest()">Suggest Location</button>
+        <select id="locationSelect">
+          <option value="">Or select a location…</option>
+          <option value="oviedo">Oviedo</option>
+          <option value="maitland">Maitland</option>
+          <option value="winterpark">Winter Park</option>
+        </select>
+        <button class="btn" type="button" onclick="submitChoice()">Continue</button>
+      </div>
+
+      <div class="fineprint">
+        ZIP suggestion is a convenience tool. You can always choose any location above.
+      </div>
+    </div>
+
+    <footer>Proud digital partner of UCF Athletics</footer>
+  </div>
+
+  <script>
+    const urls = {
+      oviedo: "https://www.scenthound.com/newyearfreetrial?location_id=154731",
+      maitland: "https://www.scenthound.com/newyearfreetrial?location_id=154775",
+      winterpark: "https://www.scenthound.com/newyearfreetrial?location_id=154832"
+    };
+
+    function go(key) {
+      window.location.href = urls[key];
+    }
+
+    function submitChoice() {
+      const val = document.getElementById("locationSelect").value;
+      if (!val) {
+        alert("Please select a location.");
+        return;
+      }
+      go(val);
+    }
+
+    // Simple ZIP → location suggestion (not perfect, but practical).
+    // You can adjust these ranges later based on your customer ZIP patterns.
+    function suggest() {
+      const zip = document.getElementById("zip").value.trim();
+      if (!/^\d{5}$/.test(zip)) {
+        alert("Please enter a valid 5-digit ZIP.");
+        return;
+      }
+
+      const z = parseInt(zip, 10);
+
+      // Rough Orlando-area heuristics:
+      // Oviedo & east Orlando often 327xx (Oviedo is 32765)
+      if (z >= 32700 && z <= 32799) {
+        document.getElementById("locationSelect").value = "oviedo";
+        return;
+      }
+
+      // Maitland / Winter Park often 3275x / 3279x / 328xx; default Maitland for 328xx
+      if (z >= 32800 && z <= 32899) {
+        document.getElementById("locationSelect").value = "maitland";
+        return;
+      }
+
+      // Fallback: Winter Park
+      document.getElementById("locationSelect").value = "winterpark";
+    }
+  </script>
 </body>
-</html>  
+</html>
